@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111018">
+    <title>Магічний портал</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main class="portal">
+        <section class="portal__card" aria-labelledby="portal-title">
+            <p class="portal__eyebrow">Таємний вхід</p>
+            <h1 id="portal-title">Магічний портал</h1>
+            <p class="portal__intro">Назви своє ім'я та промов заклинання, щоб відчинити двері.</p>
+
+            <form class="portal__form" id="portal-form" action="./treasure.html" method="get">
+                <label for="name">Ім'я шукача пригод</label>
+                <input id="name" name="name" type="text" placeholder="Наприклад, Гаррі Поттер" autocomplete="name" required>
+
+                <label for="spell">Секретне заклинання</label>
+                <div class="spell-field">
+                    <input id="spell" name="spell" type="password" placeholder="Введи заклинання" autocomplete="off" required>
+                    <button class="wand-button" id="wand-toggle" type="button" aria-label="Увімкнути ліхтарик" aria-pressed="false">
+                        <img class="wand-icon" src="./torch-off.svg" alt="">
+                    </button>
+                </div>
+
+                <button class="submit-button" type="submit">Увійти <span aria-hidden="true">✦</span></button>
+            </form>
+        </section>
+    </main>
+    <script src="./script.js" defer></script>
+</body>
+</html>

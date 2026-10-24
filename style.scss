@@ -1,0 +1,96 @@
+$gold: #d6ad68;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font: 16px Arial, sans-serif;
+    color: #eee;
+    background: #17131e;
+}
+
+.portal {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 20px;
+    background:
+        linear-gradient(rgba(23, 19, 30, 0.6), rgba(23, 19, 30, 0.6)),
+        url("./backgraund.png") center / cover no-repeat;
+}
+
+.portal__card {
+    width: min(100%, 400px);
+    padding: 24px;
+    background: #211d27;
+}
+
+.portal__eyebrow {
+    color: $gold;
+    text-align: center;
+}
+
+.portal__intro {
+    color: #ccc;
+    text-align: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.portal__form {
+    display: grid;
+    gap: 10px;
+
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #625b69;
+        background: #17131e;
+        color: white;
+        font: inherit;
+    }
+}
+
+.spell-field {
+    position: relative;
+
+    input {
+        padding-right: 50px;
+    }
+}
+
+.wand-button {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    .wand-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    &:hover .wand-icon {
+        filter: drop-shadow(0 0 3px $gold);
+    }
+}
+
+.submit-button {
+    width: 100%;
+    padding: 11px;
+    border: 0;
+    background: $gold;
+    color: #21170e;
+    cursor: pointer;
+    font: inherit;
+}
